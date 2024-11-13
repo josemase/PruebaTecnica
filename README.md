@@ -21,6 +21,7 @@ POST Method
 http://localhost:8080/?Nombres=John&Apellidos=Doe&TipoDocumento=CC&NDocumento=101564&FechaNacimiento=2000-09-18&FechaVinculacion=2020-07-24&Cargo=Developer&Salario=1000000
 
 Although the requirement specifies that the REST API should be of type GET, remember that for the addition or creation of any entity or information, the correct method to use is POST. The GET method is only used to retrieve information, not to create, save, or publish it.
+You can consume the service in postman or other tool for consume web services.
 
 Additionally, if you wish to consume the SOAP service alone, it can be done as follows:
 
