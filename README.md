@@ -1,27 +1,39 @@
 # PruebaTecnica
 Parameta
 
-To consume the REST API, which in turn will consume a SOAP web service for storing an employee-type object/entity, the process can be done as follows:
+To consume the REST API, which in turn will consume a SOAP web service for storing an employee-type object/entity, the process can be done in the following way:
 
-Since the requirement is for a REST service that receives the attributes as parameters, the consumption should be done as follows:
+First, clone the repository to your local machine.
+Making sure you have Maven installed, and in this path C:\Users\josef\Desktop\review\PruebaTecnica\test\src\main\resources\application.properties, please configure your mysql database credentials.
+You don´t need to create the database, because I share the database dump in the path "PruebaTecnica\parameta_empleado.sql", you can use it.
+Open a terminal and navigate to the root directory of the project.
+Run the following command to build the project:
+
+mvn clean install
+
+After the project is built, run the following command to start the application:
+
+mvn spring-boot:run
+
+The application will start and will be available at the following URL:
 
 POST Method
 http://localhost:8080/?Nombres=John&Apellidos=Doe&TipoDocumento=CC&NDocumento=101564&FechaNacimiento=2000-09-18&FechaVinculacion=2020-07-24&Cargo=Developer&Salario=1000000
 
 Although the requirement specifies that the REST API should be of type GET, remember that for the addition or creation of any entity or information, the correct method to use is POST. The GET method is only used to retrieve information, not to create, save, or publish it.
 
-Additionally, if you wish to consume the SOAP service, it can be done as follows:
+Additionally, if you wish to consume the SOAP service alone, it can be done as follows:
 
 POST Method
 http://localhost:8080/ws
 HEADERS
 Content-Type = text/xml
-Body:
+BODY:
    <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:test="http://parameta.com/test">
    <soapenv:Header/>
    <soapenv:Body>
       <test:addEmpleadoRequest>
-         <test:name>Joselin</test:name>
+         <test:name>jhon</test:name>
          <test:lastname>Doe</test:lastname>
          <test:role>Developer</test:role>
          <test:salary>50000</test:salary>
@@ -33,5 +45,7 @@ Body:
    </soapenv:Body>
 </soapenv:Envelope>
 
-
-For any questions or concerns, please contact Jose Fernando Martinez Seco, phone: 3012107740
+(remember to change the values of the body to the desired ones, and the project should be running when you consume any service REST or SOAP)
+For any questions or concerns, please contact Jose Fernando Martinez Seco.
+phone: 3012107740
+email: joseferms.jfm@gmail.com
