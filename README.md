@@ -5,7 +5,7 @@ To consume the REST API, which in turn will consume a SOAP web service for stori
 
 First, clone the repository to your local machine.
 Making sure you have Maven installed, and in this path C:\Users\josef\Desktop\review\PruebaTecnica\test\src\main\resources\application.properties, please configure your mysql database credentials.
-You don´t need to create the database, because I share the database dump in the path "PruebaTecnica\parameta_empleado.sql", you can use it.
+You don´t need to create the database, because I shared the database file (.sql) in the path "PruebaTecnica\parameta_empleado.sql", you can use it.
 Open a terminal and navigate to the root directory of the project.
 Run the following command to build the project:
 
